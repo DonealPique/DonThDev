@@ -63,3 +63,4 @@ btn.addEventListener('click', function () {
   displayText.textContent = 'World';
   quoteContainer.textContent = getRandomQuote();
 });
+

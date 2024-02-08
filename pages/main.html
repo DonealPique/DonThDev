@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DontheDev.com</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-</head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
 
 <body>
-
+  <div id="my-background"></div>
   <div class="container">
     <div class="navbar">
       <div class="menu">
@@ -30,19 +31,12 @@
     <div class="main-container">
       <div class="main">
         <header>
-          <video autoplay loop muted playsinline>
-            <source src="/assets/videos/hello_world.mp4" type="video/mp4">
-            Your browser doesn't support video tag.
-          </video>
-
           <div class="overlay">
             <div class="inner">
               <h2>Hello, <span class="display-text"></span></h2>
-              <p>
               <div class="quote-container">
-                <p class="quote"></p>
+                <p class="quote hover-underline-animation"></p>
               </div>
-              </p>
               <button class="btn">＞quotes＜</button>
             </div>
           </div>
@@ -55,13 +49,25 @@
 
     <div class="links">
       <ul>
-        <li><a href="#" style="--i: 0.05s;">Home</a></li>
-        <li><a href="#" style="--i: 0.1s;">Projects</a></li>
-        <li><a href="#" style="--i: 0.15s;">About</a></li>
-        <li><a href="#" style="--i: 0.2s;">Contact</a></li>
+        <li><a href="#" style="--i: 0.05s;" class="hover-underline-animation">Home</a></li>
+        <li><a href="#" style="--i: 0.1s;" class="hover-underline-animation">Projects</a></li>
+        <li><a href="#" style="--i: 0.15s;" class="hover-underline-animation">About</a></li>
+        <li><a href="#" style="--i: 0.2s;" class="hover-underline-animation">Contact</a></li>
       </ul>
     </div>
   </div>
+<script>
+  VANTA.GLOBE({
+    el: "#my-background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+  })
+</script>
   <script src="/assets/scripts/script.js"></script>
 </body>
 
