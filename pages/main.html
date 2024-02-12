@@ -9,6 +9,7 @@
   <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 <body>
   <div id="my-background"></div>
@@ -29,7 +30,7 @@
     </div>
 
     <div class="main-container">
-      <div class="main">
+      <div class="main" id="section-1">
         <header>
           <div class="overlay">
             <div class="inner">
@@ -42,19 +43,58 @@
           </div>
         </header>
       </div>
-
+      
+      <div id="section-2">
+        <div id="carousel">
+          <h1>Projects</h1>
+          <div class="hideLeft">
+           <img src="https://i1.sndcdn.com/artworks-000165384395-rhrjdn-t500x500.jpg">
+         </div>
+   
+         <div class="prevLeftSecond">
+           <img src="https://i1.sndcdn.com/artworks-000185743981-tuesoj-t500x500.jpg">
+         </div>
+   
+         <div class="prev">
+           <img src="https://i1.sndcdn.com/artworks-000158708482-k160g1-t500x500.jpg">
+         </div>
+   
+         <div class="selected">
+           <img src="https://i1.sndcdn.com/artworks-000062423439-lf7ll2-t500x500.jpg">
+         </div>
+   
+         <div class="next">
+           <img src="https://i1.sndcdn.com/artworks-000028787381-1vad7y-t500x500.jpg">
+         </div>
+   
+         <div class="nextRightSecond">
+           <img src="https://i1.sndcdn.com/artworks-000108468163-dp0b6y-t500x500.jpg">
+         </div>
+   
+         <div class="hideRight">
+           <img src="https://i1.sndcdn.com/artworks-000064920701-xrez5z-t500x500.jpg">
+         </div>
+   
+       </div>
+   
+       <div class="buttons" title="You can also use ← / → keys on your keyboard">
+         <button id="prev">Prev</button>
+         <button id="next">Next</button>
+       </div>
+      </div>
+      
       <div class="shadow one"></div>
       <div class="shadow two"></div>
-    </div>
 
     <div class="links">
       <ul>
         <li><a href="#" style="--i: 0.05s;" class="hover-underline-animation">Home</a></li>
-        <li><a href="#" style="--i: 0.1s;" class="hover-underline-animation">Projects</a></li>
+        <li><a href="#section-2" style="--i: 0.1s;" class="hover-underline-animation">Projects</a></li>
         <li><a href="#" style="--i: 0.15s;" class="hover-underline-animation">About</a></li>
         <li><a href="#" style="--i: 0.2s;" class="hover-underline-animation">Contact</a></li>
       </ul>
     </div>
+</div>
   </div>
   <script src="/assets/scripts/script.js"></script>
 </body>

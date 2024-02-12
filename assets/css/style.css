@@ -211,7 +211,7 @@ header {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(43, 51, 59, 0.8);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -427,6 +427,10 @@ ul {
     top: 3rem;
     height: calc(100vh - 3rem);
   }
+    .buttons {
+      min-width: 120px;
+      padding: 0 25px;
+    }
 }
 .hover-underline-animation {
   display: inline-block;
@@ -449,4 +453,136 @@ ul {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+#carousel {
+  position: relative;
+  height: 400px;
+  top: 50%;
+  transform: translateY(-30%);
+  margin-top: 150px;
+  overflow: hidden;
+
+  div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1;
+
+    img {
+      width: 400px;
+      transition: width 1s;
+    }
+
+    &.hideLeft {
+      left: 0%;
+      opacity: 0;
+      transform: translateY(50%) translateX(-50%);
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &.hideRight {
+      left: 100%;
+      opacity: 0;
+      transform: translateY(50%) translateX(-50%);
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &.prev {
+      z-index: 5;
+      left: 30%;
+      transform: translateY(50px) translateX(-50%);
+
+      img {
+        width: 300px;
+      }
+    }
+
+    &.prevLeftSecond {
+      z-index: 4;
+      left: 15%;
+      transform: translateY(50%) translateX(-50%);
+      opacity: 0.7;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &.selected {
+      z-index: 10;
+      left: 50%;
+      transform: translateY(0px) translateX(-50%);
+    }
+
+    &.next {
+      z-index: 5;
+      left: 70%;
+      transform: translateY(50px) translateX(-50%);
+
+      img {
+        width: 300px;
+      }
+    }
+
+    &.nextRightSecond {
+      z-index: 4;
+      left: 85%;
+      transform: translateY(50%) translateX(-50%);
+      opacity: 0.7;
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.buttons {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+}
+
+#prev,
+#next {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: #fff;
+}
+
+#prev:active,
+#next:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
 }
