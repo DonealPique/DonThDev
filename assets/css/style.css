@@ -605,3 +605,8 @@ h1 {
 .about {
   margin-top: 15px;
 }
+.info {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
