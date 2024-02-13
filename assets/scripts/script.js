@@ -64,7 +64,6 @@ btn.addEventListener('click', function () {
   quoteContainer.textContent = getRandomQuote();
 });
 
-// achterground
 VANTA.GLOBE({
   el: "#my-background",
   mouseControls: true,

@@ -10,6 +10,9 @@ body,
 button {
   font-family: "Poppins", sans-serif;
 }
+body {
+  overflow: hidden;
+}
 
 .container {
   min-height: 100vh;
@@ -240,6 +243,19 @@ header {
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
+}
+.container {
+  height: 100vh;
+  overflow-y: hidden;
+  overscroll-behavior: none;
+}
+
+.container-scrollable {
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar {
+  width: 0;
 }
 
 .container.active .bar {
@@ -547,7 +563,7 @@ ul {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10px;
+  bottom: -525px;
 }
 
 #prev,
@@ -585,4 +601,7 @@ h1 {
   color: white;
   text-align: center;
   margin-bottom: 40px;
+}
+.about {
+  margin-top: 15px;
 }
