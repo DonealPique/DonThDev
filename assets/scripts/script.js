@@ -129,3 +129,27 @@ $('#prev').click(function() {
 $('#next').click(function() {
   moveToSelected('next');
 });
+
+(function () {
+  emailjs.init({
+    publicKey: 'nslWycLQiJRAv9BXX',
+  });
+})();
+
+function SendMail(event) {
+  event.preventDefault();
+
+  var params = {
+    from_name: document.getElementById("fullName").value,
+    email_id: document.getElementById("email_id").value,
+    message: document.getElementById("message").value
+  };
+
+  emailjs.send("service_k5fv8og", "template_zaablqm", params)
+    .then(function (res) {
+      alert("Email has been succesfully sent! " + res.status);
+    })
+    .catch(function (error) {
+      console.error("Error sending email:", error);
+    });
+}

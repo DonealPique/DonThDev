@@ -10,6 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <body>
   <div id="my-background"></div>
@@ -94,15 +95,15 @@
           <p class="info-text">
             Hey there! I'm Doneal, a 19-year-old student at Bit Academy, where I'm diving into the cool mix of tech and
             creativity.<br><br>
-            
+
             🎮 I'm a big gamer! Ever since I first picked up a controller, I've been hooked on the whole gaming scene.
             Playing games got me thinking, "Hey, I want to make my own worlds too!"<br><br>
-            
+
             ✂️ I'm also into editing, reading comics/mangas, and creating music. Turns out, coding is like the ultimate
             combo of creativity and tech stuff. So, I thought, why not give it a shot?<br><br>
-            
+
             🥊 When I'm not in front of a screen, i'm out doing a bit of boxing → 3X 🗓️<br><br>
-            
+
             🌟 Hopefully, you'll stick around and follow my journey as I strive to become a skilled programmer. Let's
             code, game, and make some magic happen together!
 
@@ -209,16 +210,27 @@
             <hr style="width:200px; margin-top: 110px; margin-bottom: 30px;">
             <a href="#" download><button class="CV">Download CV</button></a>
           </div>
-
-        </div>
-
-        <div class="skills">
-          <p></p>
         </div>
 
       </div>
 
-      <div class="contact" id="section-4"></div>
+      <div class="contact" id="section-4">
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155959.26467788246!2d4.739152714925784!3d52.354760727134995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1sen!2snl!4v1708941683953!5m2!1sen!2snl"
+            width="100%" height="auto" style="border:0;" allowfullscreen="true" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form">
+          <h2>Contact me</h2>
+          <form>
+            <input type="text" placeholder="Name" id="fullName" class="contact-form-txt" required>
+            <input type="email" placeholder="Email" id="email_id" class="contact-form-txt" required>
+            <textarea placeholder="Message" id="message" class="contact-form-txtarea" required></textarea>
+            <button class="contact-form-btn" onclick="SendMail(event)">Send</button>
+          </form>
+        </div>
+      </div>
 
       <div class="links">
         <ul>
