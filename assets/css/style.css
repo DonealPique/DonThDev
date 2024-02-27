@@ -494,13 +494,19 @@ ul {
       width: 400px;
       transition: width 1s;
     }
+                                                                video {
+                                                                  width: 430px;
+                                                                  height: 370px;
+                                                                  margin-right: 120px;
+                                                                  transition: width 1s;
+                                                                }
 
     &.hideLeft {
       left: 0%;
       opacity: 0;
       transform: translateY(50%) translateX(-50%);
 
-      img {
+      video {
         width: 200px;
       }
     }

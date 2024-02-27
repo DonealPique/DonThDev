@@ -153,3 +153,13 @@ function SendMail(event) {
       console.error("Error sending email:", error);
     });
 }
+
+let projectVideo = document.querySelector(".project-video");
+
+projectVideo.addEventListener("mouseover", function (e) {
+   projectVideo.play();
+});
+
+projectVideo.addEventListener("mouseout", function (e) {
+   projectVideo.pause();
+});
