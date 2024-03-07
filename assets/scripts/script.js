@@ -103,30 +103,30 @@ function moveToSelected(element) {
 
 }
 
-$(document).keydown(function(e) {
-    switch(e.which) {
-        case 37:
-        moveToSelected('prev');
-        break;
+$(document).keydown(function (e) {
+  switch (e.which) {
+    case 37:
+      moveToSelected('prev');
+      break;
 
-        case 39:
-        moveToSelected('next');
-        break;
+    case 39:
+      moveToSelected('next');
+      break;
 
-        default: return;
-    }
-    e.preventDefault();
+    default: return;
+  }
+  e.preventDefault();
 });
 
-$('#carousel div').click(function() {
+$('#carousel div').click(function () {
   moveToSelected($(this));
 });
 
-$('#prev').click(function() {
+$('#prev').click(function () {
   moveToSelected('prev');
 });
 
-$('#next').click(function() {
+$('#next').click(function () {
   moveToSelected('next');
 });
 
@@ -154,12 +154,49 @@ function SendMail(event) {
     });
 }
 
-let projectVideo = document.querySelector(".project-video");
+document.addEventListener("DOMContentLoaded", function () {
 
-projectVideo.addEventListener("mouseover", function (e) {
-   projectVideo.play();
+  const projectVideos = document.querySelectorAll(".project-video");
+
+
+  projectVideos.forEach(projectVideo => {
+
+    projectVideo.addEventListener("mouseover", function (e) {
+      this.play();
+    });
+
+    projectVideo.addEventListener("mouseout", function (e) {
+      this.pause();
+    });
+  });
 });
 
-projectVideo.addEventListener("mouseout", function (e) {
-   projectVideo.pause();
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector('.CV');
+  const tooltip = document.querySelector('.CV-tooltip');
+  const video = document.querySelector('.CV-video');
+
+  button.addEventListener("mouseover", function () {
+    tooltip.style.display = 'block';
+    video.play();
+  });
+
+  button.addEventListener("mouseout", function () {
+    tooltip.style.display = 'none';
+    video.pause();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'typing 5s steps(40) forwards';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  let typingContainer = document.querySelector('.typing-container');
+  observer.observe(typingContainer);
 });
