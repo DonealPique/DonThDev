@@ -717,7 +717,7 @@ h3 {
   width: 40%;
   border-radius: 6px;
   background: #FF3F81;
-  animation: progress 0.4s ease-in-out forwards;
+  animation: progress 15s ease-in-out forwards;
   opacity: 0;
 }
 
