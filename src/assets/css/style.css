@@ -495,12 +495,12 @@ ul {
       transition: width 1s;
     }
 
-                                                                video {
-                                                                  width: 430px;
-                                                                  height: 370px;
-                                                                  margin-right: 120px;
-                                                                  transition: width 1s;
-                                                                }
+    video {
+      width: 430px;
+      height: 370px;
+      margin-right: 120px;
+      transition: width 1s;
+    }
 
     &.hideLeft {
       left: 0%;
@@ -581,8 +581,9 @@ ul {
 
 #CV-download {
   position: relative;
-  left: 685px;
+  left: 767px;
 }
+
 .CV,
 .contact-form-btn {
   background-color: #fbeee0;
@@ -656,10 +657,12 @@ h3 {
   text-align: center;
   color: white;
 }
+
 .info {
   text-align: center;
-  color: #fff;
-  font-size: 16px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: white;
+  font-size: 20px;
   margin-bottom: 100px;
 }
 
@@ -689,6 +692,7 @@ h3 {
     width: 100%;
   }
 }
+
 .skill-box {
   width: 100%;
   margin: 25px 0;
@@ -897,6 +901,7 @@ a>img {
   margin-left: 20px;
   margin-top: 30px;
 }
+
 .CV-tooltip {
   position: relative;
   left: 200px;
@@ -913,5 +918,5 @@ a>img {
   height: 300px;
   margin-top: 25px;
   position: relative;
-  left: 420px;
+  left: 501px;
 }
