@@ -199,6 +199,7 @@ h2 .display-text.stop-blinking::before {
   transform-origin: left;
   transform-style: preserve-3d;
   transition: 0.5s;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 header {
@@ -300,6 +301,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 ul {
@@ -580,8 +582,9 @@ ul {
 }
 
 #CV-download {
-  position: relative;
-  left: 767px;
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .CV,
@@ -599,6 +602,7 @@ ul {
   line-height: 50px;
   text-align: center;
   text-decoration: none;
+  font-family: cursive;
 }
 
 .CV:hover,
@@ -630,6 +634,7 @@ ul {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-family: cursive;
 }
 
 #prev:hover,
@@ -647,15 +652,18 @@ h1 {
   color: white;
   text-align: center;
   margin-bottom: 40px;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .about {
   margin-top: 15px;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 h3 {
   text-align: center;
   color: white;
+  font-family: cursive;
 }
 
 .info {
@@ -697,6 +705,7 @@ h3 {
   width: 100%;
   margin: 25px 0;
   text-align: center;
+  font-family: cursive;
 }
 
 .skill-box .title {
@@ -823,13 +832,13 @@ h3 {
   margin: auto;
   display: flex;
   position: relative;
-  top: 100px;
+  top: 450px;
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
   background: transparent;
   box-shadow: 0px 0px 10px 0px rgb(102, 102, 102);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .contact-map {
@@ -866,6 +875,7 @@ h3 {
   padding: 15px;
   text-align: center;
   background: transparent;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .contact-form-txt::placeholder {
@@ -883,6 +893,7 @@ h3 {
   padding: 15px;
   text-align: center;
   background: transparent;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 .contact-form-txtarea::placeholder {
@@ -916,7 +927,9 @@ a>img {
 .CV-video {
   width: 300px;
   height: 300px;
+  position: absolute;
+    left: 38.6%;
+    top: 50%;
+    transform: translate(-50%, 20%);
   margin-top: 25px;
-  position: relative;
-  left: 501px;
 }
